@@ -2,6 +2,8 @@
 
 Exfiltration protection with DNS firewall.
 
+<img src=".assets/diagram.png" width=700 />
+
 Create the infrastructure:
 
 ```
