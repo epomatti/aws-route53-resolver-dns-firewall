@@ -8,8 +8,8 @@ resource "aws_iam_instance_profile" "box" {
 }
 
 resource "aws_instance" "box" {
-  ami           = "ami-08fdd91d87f63bb09"
-  instance_type = "t4g.nano"
+  ami           = "ami-05983a09f7dc1c18f"
+  instance_type = "t4g.micro"
 
   associate_public_ip_address = true
   subnet_id                   = var.subnet
@@ -24,11 +24,12 @@ resource "aws_instance" "box" {
     http_tokens   = "required"
   }
 
-  monitoring    = false
-  ebs_optimized = false
+  monitoring    = true
+  ebs_optimized = true
 
   root_block_device {
-    encrypted = true
+    encrypted   = true
+    volume_type = "gp3"
   }
 
   lifecycle {
