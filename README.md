@@ -6,9 +6,9 @@ Exfiltration protection with DNS firewall.
 
 Create the infrastructure:
 
-```
+```sh
 terraform init
-terraform apply
+terraform apply -auto-approve
 ```
 
 After the provisioning, connect to the EC2 instance and test DNS resolution.
